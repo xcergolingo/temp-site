@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>API POST Call Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>API POST Call Test</h2>
+    <button id="callApi">Call API</button>
+    <h3>Response:</h3>
+    <pre id="result">Waiting for response...</pre>
+
+    <script>
+      document.getElementById("callApi").addEventListener("click", function () {
+        // API endpoint
+        const url = "https://rnmyudlgil.execute-api.us-east-1.amazonaws.com/prod/batch";
+
+        // Data to send in our request body
+        const data = {
+          texts: ["very beautiful girl"],
+          lang: "en"
+        };
+
+        // Options for our fetch request
+        const options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        };
+
+        // Make the POST request
+        fetch(url, options)
+          .then(response => {
+		    console.log(response)
+            if (!response.ok) {
+              throw new Error("HTTP error " + response.status);
+            }
+            return response.json();
+          })
+          .then(jsonData => {
+            document.getElementById("result").textContent = JSON.stringify(jsonData, null, 2);
+          })
+          .catch(error => {
+            document.getElementById("result").textContent = "Error: " + error;
+          });
+      });
+    </script>
+  </body>
+</html>
