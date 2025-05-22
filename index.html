@@ -2,44 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- mobile friendly viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Voice Samples</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 30px; }
-    h2 { margin-bottom: 0.25em; }
+    /* Reset defaults */
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+    }
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+    /* Fluid, auto-filling grid */
     .audio-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 24px 16px;
-      padding-left: 0;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
       list-style: none;
-      margin-top: 0;
-      margin-bottom: 2.5em;
     }
     .audio-item {
-      margin-bottom: 0.5em;
       background: #f8f8f8;
       border-radius: 6px;
-      padding: 12px 10px 4px 10px;
-      box-shadow: 0 1px 3px #0001;
+      padding: 0.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
     }
     .voice-name {
       font-weight: bold;
-      margin-bottom: 0.15em;
-      display: block;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+      font-size: 0.95rem;
     }
     audio {
       width: 100%;
-      margin-top: 0.15em;
-    }
-    @media (max-width: 900px) {
-      .audio-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .audio-grid { grid-template-columns: 1fr; }
+      outline: none;
     }
   </style>
 </head>
 <body>
+
   <h2>we are the light</h2>
   <ul class="audio-grid">
     <li class="audio-item">
@@ -128,47 +139,137 @@
     </li>
   </ul>
 
-  <h2>Spanish: Por fin conseguí lo que quería y ahora estoy solo de nuevo</h2>
+  <h2 lang="es">Spanish: Por fin conseguí lo que quería y ahora estoy solo de nuevo</h2>
   <ul class="audio-grid">
-    <li class="audio-item"><span class="voice-name">alloy</span><audio controls src="data/spanish-finally-alloy.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">ash</span><audio controls src="data/spanish-finally-ash.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">ballad</span><audio controls src="data/spanish-finally-ballad.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">coral</span><audio controls src="data/spanish-finally-coral.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">echo</span><audio controls src="data/spanish-finally-echo.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">fable</span><audio controls src="data/spanish-finally-fable.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">nova</span><audio controls src="data/spanish-finally-nova.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">onyx</span><audio controls src="data/spanish-finally-onyx.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">sage</span><audio controls src="data/spanish-finally-sage.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">shimmer</span><audio controls src="data/spanish-finally-shimmer.mp3"></audio></li>
+    <li class="audio-item">
+      <span class="voice-name">alloy</span>
+      <audio controls src="data/spanish-finally-alloy.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">ash</span>
+      <audio controls src="data/spanish-finally-ash.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">ballad</span>
+      <audio controls src="data/spanish-finally-ballad.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">coral</span>
+      <audio controls src="data/spanish-finally-coral.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">echo</span>
+      <audio controls src="data/spanish-finally-echo.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">fable</span>
+      <audio controls src="data/spanish-finally-fable.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">nova</span>
+      <audio controls src="data/spanish-finally-nova.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">onyx</span>
+      <audio controls src="data/spanish-finally-onyx.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">sage</span>
+      <audio controls src="data/spanish-finally-sage.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">shimmer</span>
+      <audio controls src="data/spanish-finally-shimmer.mp3"></audio>
+    </li>
   </ul>
 
-  <h2>Portuguese: Finalmente consegui o que queria e agora estou sozinho novamente</h2>
+  <h2 lang="pt">Portuguese: Finalmente consegui o que queria e agora estou sozinho novamente</h2>
   <ul class="audio-grid">
-    <li class="audio-item"><span class="voice-name">alloy</span><audio controls src="data/portuguesse-finally-alloy.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">ash</span><audio controls src="data/portuguesse-finally-ash.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">ballad</span><audio controls src="data/portuguesse-finally-ballad.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">coral</span><audio controls src="data/portuguesse-finally-coral.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">echo</span><audio controls src="data/portuguesse-finally-echo.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">fable</span><audio controls src="data/portuguesse-finally-fable.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">nova</span><audio controls src="data/portuguesse-finally-nova.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">onyx</span><audio controls src="data/portuguesse-finally-onyx.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">sage</span><audio controls src="data/portuguesse-finally-sage.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">shimmer</span><audio controls src="data/portuguesse-finally-shimmer.mp3"></audio></li>
+    <li class="audio-item">
+      <span class="voice-name">alloy</span>
+      <audio controls src="data/portuguesse-finally-alloy.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">ash</span>
+      <audio controls src="data/portuguesse-finally-ash.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">ballad</span>
+      <audio controls src="data/portuguesse-finally-ballad.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">coral</span>
+      <audio controls src="data/portuguesse-finally-coral.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">echo</span>
+      <audio controls src="data/portuguesse-finally-echo.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">fable</span>
+      <audio controls src="data/portuguesse-finally-fable.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">nova</span>
+      <audio controls src="data/portuguesse-finally-nova.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">onyx</span>
+      <audio controls src="data/portuguesse-finally-onyx.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">sage</span>
+      <audio controls src="data/portuguesse-finally-sage.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">shimmer</span>
+      <audio controls src="data/portuguesse-finally-shimmer.mp3"></audio>
+    </li>
   </ul>
 
-  <h2>French: J'ai enfin obtenu ce que je voulais et maintenant je suis à nouveau seul/h2>
+  <h2 lang="fr">French: J'ai enfin obtenu ce que je voulais et maintenant je suis à nouveau seul</h2>
   <ul class="audio-grid">
-    <li class="audio-item"><span class="voice-name">alloy</span><audio controls src="data/french-finally-alloy.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">ash</span><audio controls src="data/french-finally-ash.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">ballad</span><audio controls src="data/french-finally-ballad.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">coral</span><audio controls src="data/french-finally-coral.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">echo</span><audio controls src="data/french-finally-echo.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">fable</span><audio controls src="data/french-finally-fable.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">nova</span><audio controls src="data/french-finally-nova.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">onyx</span><audio controls src="data/french-finally-onyx.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">sage</span><audio controls src="data/french-finally-sage.mp3"></audio></li>
-    <li class="audio-item"><span class="voice-name">shimmer</span><audio controls src="data/french-finally-shimmer.mp3"></audio></li>
+    <li class="audio-item">
+      <span class="voice-name">alloy</span>
+      <audio controls src="data/french-finally-alloy.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">ash</span>
+      <audio controls src="data/french-finally-ash.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">ballad</span>
+      <audio controls src="data/french-finally-ballad.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">coral</span>
+      <audio controls src="data/french-finally-coral.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">echo</span>
+      <audio controls src="data/french-finally-echo.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">fable</span>
+      <audio controls src="data/french-finally-fable.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">nova</span>
+      <audio controls src="data/french-finally-nova.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">onyx</span>
+      <audio controls src="data/french-finally-onyx.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">sage</span>
+      <audio controls src="data/french-finally-sage.mp3"></audio>
+    </li>
+    <li class="audio-item">
+      <span class="voice-name">shimmer</span>
+      <audio controls src="data/french-finally-shimmer.mp3"></audio>
+    </li>
   </ul>
-  
+
 </body>
 </html>
